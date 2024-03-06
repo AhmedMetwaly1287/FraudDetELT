@@ -53,10 +53,8 @@ def insertIntoDatabase(connection, data):
             data.get('isFraud', None),
         )
 
-        # Prepare the SQL query with placeholders and execute
         sqlQuery = f'INSERT INTO transaction ({", ".join(COL_NAMES)}) VALUES ({", ".join(["%s"] * len(COL_NAMES))})'
 
-        # Execute the query with the extracted values
         dbCursor.execute(sqlQuery, values)
         connection.commit()
 
@@ -69,7 +67,6 @@ def insertIntoDatabase(connection, data):
 try:
     dbConn = establishConnection()
 
-    # Create KafkaConsumer
     consumer = KafkaConsumer(KAFKA_TOPIC, bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS, group_id='Kafka-Consumer1', value_deserializer=lambda msg: json.loads(msg.decode('utf-8')))
 
     consumer.subscribe(topics=KAFKA_TOPIC)
