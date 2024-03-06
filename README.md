@@ -1,7 +1,8 @@
 <h1>Results of Data Visualization</h1>
-![image](https://github.com/AhmedMetwaly1287/FraudDetELT/assets/139663311/70b05d6b-e10a-4541-8130-b332d030ceee)
+
+![Screenshot 2024-03-06 174314](https://github.com/AhmedMetwaly1287/FraudDetELT/assets/139663311/23a27a7f-9661-47c5-ac83-a9522cf26055)
 <br/>
-![image](https://github.com/AhmedMetwaly1287/FraudDetELT/assets/139663311/41e2ca0d-9bf4-4148-86b7-a3146e09a8e2)
+![Screenshot 2024-03-06 174334](https://github.com/AhmedMetwaly1287/FraudDetELT/assets/139663311/12e70e49-eb07-4fbd-b0db-451dab673434)
 
 
 
