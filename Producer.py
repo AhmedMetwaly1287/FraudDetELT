@@ -13,7 +13,6 @@ try:
             try:
                 entry = json.loads(line)
                 producer.send(KAFKA_TOPIC, entry)
-                producer.flush()
             except json.JSONDecodeError as json_err:
                 print(f"Error decoding JSON: {json_err}")
                 
@@ -22,5 +21,10 @@ except Exception as err:
     print(f"Error occurred: {err}")
 
 else:
-    print(f'Data sent to topic {KAFKA_TOPIC} successfully')
+    producer.flush()
+    print(f'Data sent to topic {KAFKA_TOPIC} successfully.')
+    
+
+finally:
     producer.close()
+    print(f"Producer Terminated Successfully.")
